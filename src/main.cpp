@@ -1,7 +1,7 @@
 #include <Arduino.h>
 #include <TinyGPSPlus.h>
 #include <SoftwareSerial.h>
-#include "PinMap_UNO.h";
+#include "PinMap_UNO.h"
 
 #define GPS_BAUD 9600
  
