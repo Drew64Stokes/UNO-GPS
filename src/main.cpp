@@ -13,8 +13,10 @@ void displayInfo() // Display GPS information
 {   
     if (gps.location.isValid())
         {
-            long x = gps.location.lng()/15; //calculate the UTM adjustment for time below.
-            //Serial.println(x);
+            // local = Longitude divided by 15. 
+            // This number can be added to gps.time.hour to adjust to local time as below
+            // https://dhirajpatra.medium.com/how-to-calculate-local-time-from-latitude-and-longitude-d990f30fdd52#:~:text=*%20Divide%20the%20longitude%20by%2015,%2D12%20%3C%20offset%20%3C%2012.
+            long local = gps.location.lng()/15; 
             
             // Display GPS date information
             Serial.print("Date: ");
@@ -26,7 +28,7 @@ void displayInfo() // Display GPS information
     
             // Display GPS time information
             Serial.print("  | Time: ");
-            Serial.print(gps.time.hour()+x); //Serial.print(gps.time.hour()); adjusted
+            Serial.print(gps.time.hour()+local); //Serial.print(gps.time.hour()); adjusted
             Serial.print(":");
             Serial.print(gps.time.minute());
             Serial.print(":");
@@ -62,7 +64,7 @@ void loop()
             {
                 // If parse successful, encode() function returns true, call displayInfo() function to display GPS information
                 displayInfo();
-                delay(1000);
+                delay(1000); //FIXME this does not really need to be here. Comment or delete.
             }
         }
     }
