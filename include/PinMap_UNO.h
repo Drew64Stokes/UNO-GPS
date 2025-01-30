@@ -1,5 +1,5 @@
-//#ifndef PinMap_UNO_H
-    //#define PinMap_UNO_H
+#ifndef PinMap_UNO_H
+    #define PinMap_UNO_H
 
         // LEFT SIDE                     
         // ?
@@ -40,4 +40,4 @@
         //SYSTEM SERIAL       // Digital pin 00 (RX0)
 
 
-//#endif
+#endif
