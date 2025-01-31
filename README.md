@@ -8,6 +8,8 @@ If you use this code please note.
 2. Remember the TX from the GPS goes to the RX of the Arduino.
 
 3. I'm not sure if the local time adjustment is as accurate as it might be, but it suits my purpose.
+  *** Actually pretty sure this a "dud". Clocking a day, month or year will cause problems, but it still suits my purpose. 
+  *** Be Warned!!
 
 4. I use the PinMap_UNO.h file to declutter projects. Use the PinMap_UNO.h file or not as you see fit.
 

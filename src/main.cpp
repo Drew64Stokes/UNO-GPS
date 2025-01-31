@@ -3,7 +3,7 @@
 #include <SoftwareSerial.h>
 #include "PinMap_UNO.h"
 
-#define S_BAUD 9600     // adjust as required
+#define S_BAUD   9600   // adjust as required
 #define GPS_BAUD 9600   // adjust as required     
  
 SoftwareSerial ss(gpsRX, gpsTX);
@@ -40,7 +40,7 @@ void displayInfo() // Display GPS information
             
             // Display GPS location information
             Serial.print("  | Location: ");
-            Serial.print(myGPS.location.lat(), 3); //, 6);
+            Serial.print(myGPS.location.lat(), 3); //, 6); 
             Serial.print(", ");
             Serial.print(myGPS.location.lng(), 3); //, 6);
             Serial.print(", ");
